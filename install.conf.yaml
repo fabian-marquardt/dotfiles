@@ -1,0 +1,17 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.muttrc: muttrc
+    ~/.config/omf:
+      create: true
+      path: omf
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [cd oh-my-fish && bin/install --offline --noninteractive --yes, Installing oh-my-fish]
+  - [fish -c omf update && fish -c omf install, Updating omf components]
+  - [echo "", Remember to execute 'chsh -s /usr/bin/fish' to make fish the default shell]
