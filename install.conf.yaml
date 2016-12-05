@@ -9,6 +9,9 @@
     ~/.config/omf:
       create: true
       path: omf
+    ~/.vim:
+      create: true
+      path: vim
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
