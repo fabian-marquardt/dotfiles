@@ -1,26 +1,31 @@
-" Init Vundle
+" Init Pathogen
 set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 
 " Vundle Plugins
-call vundle#begin()
+"call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'klen/python-mode'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'majutsushi/tagbar'
-Plugin 'airblade/vim-gitgutter'
+"Plugin 'VundleVim/Vundle.vim'
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'kien/ctrlp.vim'
+"Plugin 'bling/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'majutsushi/tagbar'
+"Plugin 'airblade/vim-gitgutter'
+"Plugin 'leafgarland/typescript-vim'
 
+" Python stuff
+"Plugin 'davidhalter/jedi-vim'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+"call vundle#end()            " required
 
 " Config
+let g:molokai_original = 1
 syntax enable
+colorscheme molokai
 set number
 set ts=4
 set autoindent
@@ -32,6 +37,8 @@ let python_highlight_all = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='powerlineish'
 set hidden
+set nofoldenable
+set mouse=a
 
 " Keybindings
 noremap <Tab> :NERDTreeToggle<cr>
