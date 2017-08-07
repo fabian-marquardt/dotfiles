@@ -22,10 +22,13 @@ filetype plugin indent on
 
 "call vundle#end()            " required
 
-" Config
+" Theme Config
 let g:molokai_original = 1
 syntax enable
 colorscheme molokai
+let g:airline_theme='molokai'
+let g:airline#extensions#tabline#enabled = 1
+
 set number
 set ts=4
 set autoindent
@@ -34,8 +37,6 @@ set shiftwidth=4
 set cursorline
 set showmatch
 let python_highlight_all = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='powerlineish'
 set hidden
 set nofoldenable
 set mouse=a
@@ -45,5 +46,25 @@ noremap <Tab> :NERDTreeToggle<cr>
 noremap <C-Q> :TagbarToggle<cr>
 noremap <C-T> :enew<cr>
 noremap <C-W> :bd<cr>
+noremap <C-Y> :Yapf<cr>
 noremap <C-Right> :bnext<cr>
 noremap <C-Left> :bprevious<cr>
+noremap <S-Right> :wincmd l<cr>
+noremap <S-Left> :wincmd h<cr>
+
+" Syntastic config
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Tagbar config
+let g:tagbar_compact = 1
+nnoremap <silent> <F9> :TagbarToggle<CR>
+
+" Yapf
+
