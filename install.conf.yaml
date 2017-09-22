@@ -9,9 +9,19 @@
     ~/.config/omf:
       create: true
       path: omf
+    ~/.config/compton.conf: compton/compton.conf
+    ~/.config/dunst:
+      create: true
+      path: dunst
+    ~/.config/i3status:
+      create: true
+      path: i3status
     ~/.vim:
       create: true
       path: vim
+    ~/.i3:
+      create: true
+      path: i3
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
