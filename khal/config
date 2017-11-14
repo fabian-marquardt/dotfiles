@@ -1,0 +1,30 @@
+[calendars]
+[[personal]]
+path = ~/.vdirsyncer/calendar/*
+type = discover
+color = dark green
+
+[[work]]
+path = ~/.vdirsyncer/work_calendar/*
+type = discover
+color = dark blue
+
+[default]
+show_all_days = False
+highlight_event_days = True
+
+[highlight_days]
+method = bg
+
+[view]
+theme = dark
+frame = False
+
+[locale]
+local_timezone= Europe/Berlin
+default_timezone= Europe/Berlin
+timeformat= %H:%M
+dateformat= %d.%m.
+longdateformat= %d.%m.%Y
+datetimeformat= %d.%m. %H:%M
+longdatetimeformat= %d.%m.%Y %H:%M

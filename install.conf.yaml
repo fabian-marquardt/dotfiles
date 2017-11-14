@@ -22,6 +22,12 @@
     ~/.i3:
       create: true
       path: i3
+    ~/.config/vdirsyncer:
+      create: true
+      path: vdirsyncer
+    ~/.config/khal:
+      create: true
+      path: khal
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

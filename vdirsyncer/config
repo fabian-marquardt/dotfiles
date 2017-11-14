@@ -1,0 +1,53 @@
+[general]
+status_path = "~/.vdirsyncer/status/"
+
+[pair my_contacts]
+a = "my_contacts_local"
+b = "my_contacts_remote"
+collections = ["from a", "from b"]
+
+[storage my_contacts_local]
+type = "filesystem"
+path = "~/.vdirsyncer/contacts/"
+fileext = ".vcf"
+
+[storage my_contacts_remote]
+type = "carddav"
+
+url = "https://marquardt.cloud/remote.php/carddav/"
+username = "fabian"
+password.fetch = ["command", "pass", "Private/Nextcloud"]
+
+[pair my_calendar]
+a = "my_calendar_local"
+b = "my_calendar_remote"
+collections = ["from a", "from b"]
+
+[storage my_calendar_local]
+type = "filesystem"
+path = "~/.vdirsyncer/calendar/"
+fileext = ".ics"
+
+[storage my_calendar_remote]
+type = "caldav"
+
+url = "https://marquardt.cloud/remote.php/caldav/"
+username = "fabian"
+password.fetch = ["command", "pass", "Private/Nextcloud"]
+
+[pair work_calendar]
+a = "work_calendar_local"
+b = "work_calendar_remote"
+collections = ["from a", "from b"]
+
+[storage work_calendar_local]
+type = "filesystem"
+path = "~/.vdirsyncer/work_calendar/"
+fileext = ".ics"
+
+[storage work_calendar_remote]
+type = "caldav"
+
+url = "https://itsec.cs.uni-bonn.de/home/marquard@itsec.cs.uni-bonn.de/Calendar"
+username = "marquard"
+password.fetch = ["command", "pass", "Work/Login"]
