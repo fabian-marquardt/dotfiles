@@ -28,6 +28,7 @@
     ~/.config/khal:
       create: true
       path: khal
+    ~/.tmux.conf: tmux/.tmux.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

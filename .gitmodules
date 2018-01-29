@@ -43,3 +43,6 @@
 [submodule "vim/bundle/vim-yapf"]
 	path = vim/bundle/vim-yapf
 	url = https://github.com/mindriot101/vim-yapf.git
+[submodule "tmux"]
+	path = tmux
+	url = https://github.com/gpakosz/.tmux.git
